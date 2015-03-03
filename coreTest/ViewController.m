@@ -16,13 +16,12 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    // TODO:作業
+    // appdelegateからmanagedObjectContextを取得
+    
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
+
 
 /**
  *  保存ボタンタップアクション
@@ -31,16 +30,51 @@
  */
 - (IBAction)pushSaveButton:(id)sender
 {
+    // 保存するデータ
+    NSString *string = self.textField.text;
+    NSDate *date = [NSDate date];
+    
+    // TODO:作業
+    // インサート用エンティティの生成
+    
+    
+    // TODO:作業
+    // 代入
+    
+    
+    // TODO:作業
+    // 保存
+    
     
 }
 
 /**
  *  取り出しボタンタップアクション
  *
- *  @param sender <#sender description#>
+ *  @param sender
  */
 - (IBAction)pushFetchButton:(id)sender
 {
-    self.textView.text = @"aaaaaaaaaaaaaaaaaaaaaaaa";
+    // TODO:作業
+    // Fetchオブジェクトを生成
+    
+    
+    // ソート条件を保存
+    NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"date" ascending:NO];
+    NSArray *discriptors = [[NSArray alloc] initWithObjects:sortDescriptor, nil];
+//    [fetchRequest setSortDescriptors:discriptors];
+    
+    
+    // TODO:作業
+     // データを取得
+    
+    
+    // textViewに出力
+    NSMutableString *output = [NSMutableString string];
+//    for (Hoge *hoge in result) {
+//        [output appendString:[NSString stringWithFormat:@"%@\n",[hoge name]]];
+//    }
+//    self.textView.text = output;
+    self.textView.text = self.textField.text;
 }
 @end
