@@ -7,8 +7,12 @@
 //
 
 #import "ViewController.h"
+#import "AppDelegate.h"
+// TODO:①作成したエンティティクラスをインポート
 
 @interface ViewController ()
+
+// TODO:②managedObjectContextのプロパティを宣言
 
 @end
 
@@ -16,8 +20,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // TODO:作業
-    // appdelegateからmanagedObjectContextを取得
+    // TODO:③appdelegateからmanagedObjectContextを取得、プロパティに代入
+
     
 }
 
@@ -34,16 +38,14 @@
     NSString *string = self.textField.text;
     NSDate *date = [NSDate date];
     
-    // TODO:作業
-    // インサート用エンティティの生成
+    // TODO:④インサート用エンティティの生成
     
     
-    // TODO:作業
-    // 代入
+    // TODO:⑤エンティティに保存するデータを代入
+
     
     
-    // TODO:作業
-    // 保存
+    // TODO:⑥coreDataに保存する
     
     
 }
@@ -55,26 +57,27 @@
  */
 - (IBAction)pushFetchButton:(id)sender
 {
-    // TODO:作業
-    // Fetchオブジェクトを生成
+    // TODO:⑦Fetchリクエストオブジェクトを生成
     
     
-    // ソート条件を保存
+    // ソート条件を設定
     NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"date" ascending:NO];
     NSArray *discriptors = [[NSArray alloc] initWithObjects:sortDescriptor, nil];
 //    [fetchRequest setSortDescriptors:discriptors];
     
     
-    // TODO:作業
-     // データを取得
+    // TODO:⑧フェッチを実行、結果を取得
     
     
     // textViewに出力
     NSMutableString *output = [NSMutableString string];
+    // TODO:⑨作成したエンティティにあわせて変更、コメント外す
 //    for (Hoge *hoge in result) {
 //        [output appendString:[NSString stringWithFormat:@"%@\n",[hoge name]]];
 //    }
 //    self.textView.text = output;
+    
+    // テキストフィールド→テキストビューの出力（消す）
     self.textView.text = self.textField.text;
 }
 @end
